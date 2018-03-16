@@ -1,0 +1,11 @@
+box
+200 400 0 100 300 100
+sphere
+250 350 -50 40
+sphere
+250 250 -50 40
+sphere
+250 150 -50 40
+display
+save
+trafficLight.png
