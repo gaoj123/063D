@@ -18,9 +18,19 @@ def add_box( points, x, y, z, width, height, depth ):
                  
 
 def add_sphere( points, cx, cy, cz, r, step ):
-    pass
+    spherePoints=generate_sphere(points, cx, cy, cz, r, step)
+    for point in spherePoints:
+        add_edge(points, point[0], point[1], point[2], point[0]+1, point[1], point[2])
+
 def generate_sphere( points, cx, cy, cz, r, step ):
-    pass
+    m=new_matrix()
+    for i in range(i, step+1): ##phi: 0 -> 2 pi
+        for j in range(j, step+1): ##theta: 0 -> pi
+            x=r*math.cos((j+0.0)*math.pi/step)+cx
+            y=r*math.sin((j+0.0)*math.pi/step)*math.cos((i+0.0)*math.pi*2/step)+cy
+            z=r*math.sin((j+0.0)*math.pi/step)*math.sin((i+0.0)*math.pi*2/step)+cz
+            m.append([x,y,z,1])
+    return m
 
 def add_torus( points, cx, cy, cz, r0, r1, step ):
     pass
