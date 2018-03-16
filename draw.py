@@ -24,8 +24,8 @@ def add_sphere( points, cx, cy, cz, r, step ):
 
 def generate_sphere( points, cx, cy, cz, r, step ):
     m=new_matrix()
-    for i in range(i, step+1): ##phi: 0 -> 2 pi
-        for j in range(j, step+1): ##theta: 0 -> pi
+    for i in range(0, step+1): ##phi: 0 -> 2 pi
+        for j in range(0, step+1): ##theta: 0 -> pi
             x=r*math.cos((j+0.0)*math.pi/step)+cx
             y=r*math.sin((j+0.0)*math.pi/step)*math.cos((i+0.0)*math.pi*2/step)+cy
             z=r*math.sin((j+0.0)*math.pi/step)*math.sin((i+0.0)*math.pi*2/step)+cz
