@@ -33,9 +33,13 @@ def generate_sphere( points, cx, cy, cz, r, step ):
     return m
 
 def add_torus( points, cx, cy, cz, r0, r1, step ):
-    pass
+    torusPoints=generate_torus(points, cx, cy, cz, r0, r1, step)
+    for point in torusPoints:
+        add_edge(points, point[0], point[1], point[2], point[0]+1, point[1], point[2])
+        
 def generate_torus( points, cx, cy, cz, r0, r1, step ):
-    pass
+    m=new_matrix()
+    return m
 
 def add_circle( points, cx, cy, cz, r, step ):
     x0 = r + cx
