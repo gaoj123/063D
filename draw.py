@@ -41,9 +41,9 @@ def generate_torus( points, cx, cy, cz, r0, r1, step ):
     m=new_matrix()
     for i in range(0, step+1): ##phi: 0 -> 2 pi
         for j in range(0, step+1): ##theta: 0 -> 2 pi
-            x=math.cos((i+0.0)*2*math.pi/step)*(r*math.cos((j+0.0)*2*math.pi/step)+r1)+cx
-            y=r*math.sin((j+0.0)*2*math.pi/step)+cy
-            z=-1*math.sin((i+0.0)*2*math.pi/step)*(r*math.cos((j+0.0)*2*math.pi/step)+r1)+cz
+            x=math.cos((i+0.0)*2*math.pi/step)*(r0*math.cos((j+0.0)*2*math.pi/step)+r1)+cx
+            y=r0*math.sin((j+0.0)*2*math.pi/step)+cy
+            z=-1*math.sin((i+0.0)*2*math.pi/step)*(r0*math.cos((j+0.0)*2*math.pi/step)+r1)+cz
             m.append([x,y,z,1])                                            
     return m
 
