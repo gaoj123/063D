@@ -1,6 +1,6 @@
 from display import *
 from draw import *
-from parser import *
+from parser2 import *
 from matrix import *
 import math
 
@@ -14,4 +14,8 @@ transform = new_matrix()
 # print_matrix( make_hermite() )
 # print
 
-parse_file( 'script', edges, transform, screen, color )
+##RUNS MR. DW's SCRIPT
+#parse_file( 'script', edges, transform, screen, color )
+
+##RUNS MY SCRIPT: TRAFFIC LIGHT
+parse_file( 'script2', edges, transform, screen, color )
