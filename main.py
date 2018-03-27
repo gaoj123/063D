@@ -15,7 +15,9 @@ transform = new_matrix()
 # print
 
 ##RUNS MR. DW's SCRIPT
-#parse_file( 'script', edges, transform, screen, color )
+parse_file( 'script', edges, transform, screen, color )
+
+edges = []
 
 ##RUNS MY SCRIPT: TRAFFIC LIGHT
 parse_file( 'script2', edges, transform, screen, color )
